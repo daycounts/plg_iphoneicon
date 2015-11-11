@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+	<name>PLG_SYSTEM_II</name>
+	<license>Open Source License, GPL v2 based</license>
+	<author>Daycounts.com</author>
+	<authorEmail>info@daycounts.com</authorEmail>
+	<authorUrl>http://www.daycounts.com</authorUrl>
+	<creationDate>Sept. 2013</creationDate>
+	<copyright>2010 Daycounts.com</copyright>
+	<version>1.3.3</version>
+	<description>PLG_II_DESCRIPTION</description>
+	<scriptfile>iphoneicon.install.php</scriptfile>
+	<files>
+		<filename plugin="iphoneicon">iphoneicon.php</filename>
+		<file>params.ini</file>
+		<folder>iphoneicon</folder>
+		<folder>language</folder>
+		<folder>elements</folder>
+	</files>
+	<config addfieldpath="/plugins/system/iphoneicon/elements">
+		<fields name="params">
+			<fieldset name="basic">
+				<field type="versioncheck" name="iphoneicon" versioncat="22" label="PLG_DAYCOUNTS_VERSION" pluginfolder="system" pluginname="iphoneicon" />
+				<field type="versionhistory" name="versionhistory" versioncat="22" label="" description="" />
+
+				<field name="title" type="text" default="" label="PLG_II_ICON_TITLE" description="PLG_II_ICON_TITLE_DESC" size="50" />
+				<field name="gloss" type="radio" default="1" label="PLG_II_GLOSS" description="PLG_II_GLOSS_DESC">
+					<option value="0">PLG_II_NO</option>
+					<option value="1">PLG_II_YES</option>
+				</field>
+				<field name="fullscreen" type="radio" default="1" label="PLG_II_FULLSCREEN" description="PLG_II_FULLSCREEN_DESC">
+					<option value="0">PLG_II_NO</option>
+					<option value="1">PLG_II_YES</option>
+				</field>
+				<field name="statusbar" type="radio" default="1" label="PLG_II_STATUSBAR" description="PLG_II_STATUSBAR_DESC">
+					<option value="0">PLG_II_NO</option>
+					<option value="1">PLG_II_YES</option>
+				</field>
+				<field name="debug" type="radio" default="0" label="PLG_II_DEBUG" description="PLG_II_DEBUG_DESC">
+					<option value="0">PLG_II_NO</option>
+					<option value="1">PLG_II_YES</option>
+				</field>
+			</fieldset>
+			<fieldset name="PLG_II_IPHONE_SPACER">
+				<field type="title" default="PLG_II_IPHONE_SPACER" />
+				<field name="icon" type="media" default="plugins/system/iphoneicon/iphoneicon/logo-57.png" label="PLG_II_ICON_IPHONE" description="PLG_II_ICON_DESC" directory=""  preview="tooltip" size="40" />
+				<field name="startup" type="media" default="plugins/system/iphoneicon/iphoneicon/startup_iphone.png" label="PLG_II_STARTUP" description="PLG_II_STARTUP_DESC" directory=""  preview="tooltip" size="40"  />
+			</fieldset>
+			<fieldset name="PLG_II_IPHONE_HIGH_SPACER">
+				<field type="title" default="PLG_II_IPHONE_HIGH_SPACER" />
+				<field name="icon_iphone4" type="media" default="plugins/system/iphoneicon/iphoneicon/logo-114.png" label="PLG_II_ICON_IPHONE4" description="PLG_II_ICON_DESC" directory=""  preview="tooltip" size="40" />
+				<field name="startup-high" type="media" default="plugins/system/iphoneicon/iphoneicon/startup_iphone_high.png" label="PLG_II_STARTUP_HIGH" description="PLG_II_STARTUP_DESC" directory=""  preview="tooltip" size="40" />
+			</fieldset>
+			<fieldset name="PLG_II_IPHONE_5_SPACER">
+				<field type="title" default="PLG_II_IPHONE_5_SPACER" />
+				<field name="startup-iphone5" type="media" default="plugins/system/iphoneicon/iphoneicon/startup_iphone_5.png" label="PLG_II_STARTUP_IPHONE5" description="PLG_II_STARTUPI5_DESC" directory=""  preview="tooltip" size="40" />
+			</fieldset>
+			<fieldset name="PLG_II_IPAD_SPACER">
+				<field type="title" default="PLG_II_IPAD_SPACER" />
+				<field name="icon_ipad" type="media" default="plugins/system/iphoneicon/iphoneicon/logo-72.png" label="PLG_II_ICON_IPAD" description="PLG_II_ICON_DESC" directory=""  preview="tooltip" size="40" />
+				<field name="startup-ipad-l" type="media" default="plugins/system/iphoneicon/iphoneicon/startup_ipad_l.png" label="PLG_II_STARTUP_IPAD_L" description="PLG_II_STARTUP_DESC" directory=""  preview="tooltip" size="40" />
+				<field name="startup-ipad-p" type="media" default="plugins/system/iphoneicon/iphoneicon/startup_ipad_p.png" label="PLG_II_STARTUP_IPAD_P" description="PLG_II_STARTUP_DESC" directory=""  preview="tooltip" size="40" />
+			</fieldset>
+			<fieldset name="PLG_II_IPAD_HIGH_SPACER">
+				<field type="title" default="PLG_II_IPAD_HIGH_SPACER" />
+				<field name="icon_ipad-high" type="media" default="plugins/system/iphoneicon/iphoneicon/logo-144.png" label="PLG_II_ICON_IPADHIGH" description="PLG_II_ICON_DESC" directory=""  preview="tooltip" size="40" />
+				<field name="startup-ipad-high-l" type="media" default="plugins/system/iphoneicon/iphoneicon/startup_ipad_high_l.png" label="PLG_II_STARTUP_IPAD_HIGH_L" description="PLG_II_STARTUP_DESC" directory=""  preview="tooltip" size="40" />
+				<field name="startup-ipad-high-p" type="media" default="plugins/system/iphoneicon/iphoneicon/startup_ipad_high_p.png" label="PLG_II_STARTUP_IPAD_HIGH_P" description="PLG_II_STARTUP_DESC" directory=""  preview="tooltip" size="40" />
+
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+		<server type="extension" priority="1" name="iPhone icons plugin"><![CDATA[http://www.daycounts.com/index.php?option=com_versions&catid=22&task=updateserver.xml]]></server>
+	</updateservers>
+</extension>
